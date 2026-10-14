@@ -1,0 +1,1130 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Carpintería a la Medida | Muebles en Bogotá</title>
+
+  <meta name="description"
+    content="Fabricamos muebles personalizados en MDF, melamina y aglomerado en Bogotá. Cocinas, clósets, muebles para baños, hogares y negocios. Solicita tu cotización.">
+
+  <meta name="theme-color" content="#20251f">
+
+  <style>
+    :root {
+      --dark: #20251f;
+      --green: #475744;
+      --cream: #f6f4ee;
+      --gold: #c6a777;
+      --white: #ffffff;
+      --text: #343832;
+      --muted: #74786f;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 85px;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      color: var(--text);
+      line-height: 1.6;
+      background: var(--white);
+    }
+
+    a {
+      color: inherit;
+    }
+
+    .container {
+      width: min(1120px, 90%);
+      margin: auto;
+    }
+
+    /* ENCABEZADO */
+
+    header {
+      background: var(--dark);
+      color: var(--white);
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    .navbar {
+      min-height: 76px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .logo {
+      text-decoration: none;
+      font-size: 18px;
+      font-weight: bold;
+      letter-spacing: 0.4px;
+    }
+
+    .logo span {
+      display: block;
+      font-size: 10px;
+      font-weight: normal;
+      color: var(--gold);
+      letter-spacing: 3px;
+      text-transform: uppercase;
+    }
+
+    nav {
+      display: flex;
+      align-items: center;
+      gap: 25px;
+    }
+
+    nav a {
+      text-decoration: none;
+      font-size: 14px;
+      color: #eee;
+    }
+
+    nav a:hover {
+      color: var(--gold);
+    }
+
+    .menu-btn {
+      display: none;
+      background: transparent;
+      border: 1px solid #777;
+      border-radius: 5px;
+      color: white;
+      padding: 8px 12px;
+      cursor: pointer;
+    }
+
+    /* PORTADA: SE CONSERVA LA IMAGEN ACTUAL */
+
+    .hero {
+      min-height: 570px;
+      display: flex;
+      align-items: center;
+      color: white;
+      background:
+        linear-gradient(90deg,
+          rgba(24, 29, 23, 0.94),
+          rgba(24, 29, 23, 0.62)),
+        url("https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=1800&q=85")
+        center/cover no-repeat;
+    }
+
+    .hero-content {
+      max-width: 730px;
+      padding: 90px 0;
+    }
+
+    .eyebrow {
+      color: var(--gold);
+      text-transform: uppercase;
+      font-size: 12px;
+      font-weight: bold;
+      letter-spacing: 3px;
+      margin-bottom: 18px;
+    }
+
+    h1 {
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(38px, 6vw, 66px);
+      line-height: 1.1;
+      font-weight: normal;
+      margin-bottom: 22px;
+    }
+
+    .hero p {
+      max-width: 570px;
+      color: #e7e7e2;
+      font-size: 17px;
+      margin-bottom: 30px;
+    }
+
+    .actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 13px 22px;
+      border-radius: 3px;
+      font-weight: bold;
+      text-decoration: none;
+      font-size: 14px;
+      transition: 0.2s;
+      cursor: pointer;
+      border: 1px solid transparent;
+    }
+
+    .btn-primary {
+      background: var(--gold);
+      color: #20251f;
+    }
+
+    .btn-primary:hover {
+      background: #d7bd91;
+      transform: translateY(-2px);
+    }
+
+    .btn-outline {
+      color: white;
+      border-color: #d7d7d0;
+    }
+
+    .btn-outline:hover {
+      background: white;
+      color: var(--dark);
+    }
+
+    /* SECCIONES */
+
+    section {
+      padding: 85px 0;
+    }
+
+    .section-heading {
+      max-width: 680px;
+      margin: 0 auto 42px;
+      text-align: center;
+    }
+
+    .section-heading .eyebrow {
+      margin-bottom: 10px;
+    }
+
+    h2 {
+      color: var(--dark);
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(30px, 4vw, 43px);
+      line-height: 1.2;
+      font-weight: normal;
+      margin-bottom: 16px;
+    }
+
+    .section-heading p {
+      color: var(--muted);
+    }
+
+    /* SERVICIOS */
+
+    .services {
+      background: var(--cream);
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 22px;
+    }
+
+    .card {
+      background: white;
+      border: 1px solid #e8e5dd;
+      overflow: hidden;
+    }
+
+    .card img {
+      display: block;
+      width: 100%;
+      height: 225px;
+      object-fit: cover;
+      background: #dedbd2;
+    }
+
+    .card-body {
+      padding: 23px;
+    }
+
+    .card h3 {
+      font-size: 19px;
+      color: var(--dark);
+      margin-bottom: 9px;
+    }
+
+    .card p {
+      font-size: 14px;
+      color: var(--muted);
+      margin-bottom: 16px;
+    }
+
+    .text-link {
+      color: var(--green);
+      font-size: 14px;
+      font-weight: bold;
+      text-decoration: none;
+    }
+
+    .text-link:hover {
+      text-decoration: underline;
+    }
+
+    /* SOBRE NOSOTROS */
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 55px;
+      align-items: center;
+    }
+
+    .about-photo {
+      width: 100%;
+      min-height: 390px;
+      object-fit: cover;
+      background: var(--cream);
+    }
+
+    .about-copy p {
+      color: var(--muted);
+      margin-bottom: 18px;
+    }
+
+    .features {
+      list-style: none;
+      margin: 24px 0;
+    }
+
+    .features li {
+      margin: 12px 0;
+    }
+
+    .features li::before {
+      content: "✓";
+      color: var(--green);
+      font-weight: bold;
+      margin-right: 10px;
+    }
+
+    /* PROCESO */
+
+    .process {
+      background: var(--dark);
+      color: white;
+    }
+
+    .process h2 {
+      color: white;
+    }
+
+    .process .section-heading p {
+      color: #d1d2ca;
+    }
+
+    .steps {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 30px;
+    }
+
+    .step {
+      border-top: 1px solid #60675a;
+      padding-top: 22px;
+    }
+
+    .step-number {
+      color: var(--gold);
+      font-size: 13px;
+      letter-spacing: 2px;
+      margin-bottom: 12px;
+    }
+
+    .step h3 {
+      margin-bottom: 10px;
+      font-size: 19px;
+    }
+
+    .step p {
+      font-size: 14px;
+      color: #d1d2ca;
+    }
+
+    /* CONTACTO */
+
+    .contact {
+      text-align: center;
+      background: var(--cream);
+    }
+
+    .contact-inner {
+      max-width: 720px;
+      margin: auto;
+    }
+
+    .contact-inner > p {
+      color: var(--muted);
+      margin-bottom: 25px;
+    }
+
+    .contact .actions {
+      justify-content: center;
+    }
+
+    .contact .btn-outline {
+      color: var(--dark);
+      border-color: var(--dark);
+    }
+
+    .contact .btn-outline:hover {
+      background: var(--dark);
+      color: white;
+    }
+
+    /* BOTONES DE LAS DOS LÍNEAS */
+
+    .whatsapp-secondary-link {
+      display: inline-block;
+      margin: 8px 0 0 10px;
+    }
+
+    /* PIE DE PÁGINA */
+
+    footer {
+      background: var(--dark);
+      color: #e5e5dd;
+      padding: 30px 0;
+      text-align: center;
+      font-size: 13px;
+    }
+
+    footer p + p {
+      margin-top: 6px;
+      color: #b9bcb3;
+    }
+
+    /* WHATSAPP FLOTANTE */
+
+    .whatsapp-float {
+      position: fixed;
+      bottom: 22px;
+      right: 22px;
+      z-index: 20;
+      background: #198754;
+      color: white;
+      padding: 13px 17px;
+      border-radius: 30px;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 14px;
+      box-shadow: 0 4px 18px #0003;
+    }
+
+    .whatsapp-float:hover {
+      background: #146c43;
+    }
+
+    .whatsapp-float-secondary {
+      bottom: 78px;
+      background: #146c43;
+    }
+
+    /* CELULARES Y TABLETAS */
+
+    @media (max-width: 800px) {
+      .menu-btn {
+        display: block;
+      }
+
+      nav {
+        display: none;
+        position: absolute;
+        top: 76px;
+        left: 0;
+        right: 0;
+        background: var(--dark);
+        padding: 20px 5%;
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      nav.open {
+        display: flex;
+      }
+
+      .hero {
+        min-height: 510px;
+      }
+
+      .cards {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .about-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+      }
+
+      .about-photo {
+        min-height: 280px;
+      }
+
+      .steps {
+        grid-template-columns: 1fr;
+        gap: 28px;
+      }
+    }
+
+    @media (max-width: 520px) {
+      section {
+        padding: 62px 0;
+      }
+
+      .cards {
+        grid-template-columns: 1fr;
+      }
+
+      .card img {
+        height: 245px;
+      }
+
+      .hero-content {
+        padding: 65px 0;
+      }
+
+      .hero p {
+        font-size: 15px;
+      }
+
+      .actions .btn {
+        text-align: center;
+      }
+
+      .whatsapp-float {
+        bottom: 14px;
+        right: 12px;
+      }
+
+      .whatsapp-float-secondary {
+        bottom: 70px;
+        right: 12px;
+      }
+    }
+
+
+    /* Selector de línea para el botón del proyecto */
+    .whatsapp-choice-overlay {
+      position: fixed;
+      inset: 0;
+      z-index: 2000;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+      background: rgba(20, 24, 20, 0.62);
+    }
+
+    .whatsapp-choice-overlay.open {
+      display: flex;
+    }
+
+    .whatsapp-choice-modal {
+      width: min(100%, 390px);
+      padding: 28px;
+      border-radius: 14px;
+      background: var(--cream);
+      color: var(--dark);
+      box-shadow: 0 18px 55px rgba(0, 0, 0, 0.25);
+      text-align: center;
+    }
+
+    .whatsapp-choice-modal h3 {
+      margin-bottom: 8px;
+      font-size: 21px;
+    }
+
+    .whatsapp-choice-modal p {
+      margin-bottom: 20px;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .whatsapp-choice-options {
+      display: grid;
+      gap: 10px;
+    }
+
+    .whatsapp-choice-options a {
+      display: block;
+      padding: 13px 16px;
+      border-radius: 6px;
+      background: var(--green);
+      color: white;
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    .whatsapp-choice-options a:hover {
+      opacity: 0.9;
+    }
+
+    .whatsapp-choice-close {
+      margin-top: 16px;
+      border: 0;
+      background: transparent;
+      color: var(--muted);
+      cursor: pointer;
+      font: inherit;
+    }
+
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <div class="container navbar">
+
+      <a class="logo" href="#inicio">
+        CARPINTERÍA
+        <span>A la Medida</span>
+      </a>
+
+      <button class="menu-btn"
+        id="menuBtn"
+        aria-expanded="false"
+        aria-controls="menu">
+        Menú ☰
+      </button>
+
+      <nav id="menu">
+        <a href="#inicio">Inicio</a>
+        <a href="#servicios">Servicios</a>
+        <a href="#materiales">Materiales y herrajes</a>
+        <a href="#nosotros">Nosotros</a>
+        <a href="#proceso">Cómo trabajamos</a>
+        <a href="#contacto">Contacto</a>
+      </nav>
+
+    </div>
+  </header>
+
+  <main>
+
+    <section class="hero" id="inicio">
+      <div class="container hero-content">
+
+        <p class="eyebrow">Diseño · Fabricación · Instalación</p>
+
+        <h1>Muebles hechos a tu medida, pensados para tu espacio.</h1>
+
+        <p>
+          Creamos muebles personalizados en MDF y melamina
+          para hogares, apartamentos y negocios en Bogotá.
+          Tú imaginas el espacio; nosotros te ayudamos a hacerlo realidad.
+        </p>
+
+        <div class="actions">
+          <a class="btn btn-primary"
+             href="#servicios">
+            Conoce nuestros servicios
+          </a>
+
+          <a class="btn btn-outline whatsapp-link"
+             href="https://wa.me/573507760302"
+             target="_blank"
+             rel="noopener noreferrer">
+            Solicitar cotización
+          </a>
+        </div>
+
+      </div>
+    </section>
+
+    <section class="services" id="servicios">
+      <div class="container">
+
+        <div class="section-heading">
+          <p class="eyebrow">Nuestros servicios</p>
+          <h2>Soluciones para cada espacio</h2>
+          <p>
+            Fabricamos muebles personalizados según tus
+            necesidades, medidas y estilo.
+          </p>
+        </div>
+
+        <div class="cards">
+
+          <article class="card">
+            <img
+              src="images/cocinas.jpg"
+              alt="Cocina integral fabricada a medida"
+              loading="lazy">
+
+            <div class="card-body">
+              <h3>Cocinas integrales</h3>
+              <p>
+                Muebles de cocina diseñados para aprovechar
+                el espacio y organizar cada rincón.
+              </p>
+              <a class="text-link quote-link"
+                 data-service="cocinas integrales"
+                 href="https://wa.me/573507760302">
+                Cotiza este servicio en la Linea 1 →
+              </a>
+            </div>
+          </article>
+
+          <article class="card">
+            <img
+              src="images/vestidores.jpg"
+              alt="Clóset y vestidor fabricado a medida"
+              loading="lazy">
+
+            <div class="card-body">
+              <h3>Clósets y vestidores</h3>
+              <p>
+                Soluciones de almacenamiento adaptadas
+                a las medidas de tu habitación.
+              </p>
+              <a class="text-link quote-link"
+                 data-service="clósets y vestidores"
+                 href="https://wa.me/573507760302">
+                Cotiza este servicio en la Linea 1 →
+              </a>
+            </div>
+          </article>
+
+          <article class="card">
+            <img
+              src="images/salas.jpg"
+              alt="Muebles personalizados para salas"
+              loading="lazy">
+
+            <div class="card-body">
+              <h3>Muebles para salas</h3>
+              <p>
+                Centros de entretenimiento, muebles para
+                TV, repisas y soluciones decorativas.
+              </p>
+              <a class="text-link quote-link"
+                 data-service="muebles para salas"
+                 href="https://wa.me/573507760302">
+                Cotiza este servicio en la Linea 1 →
+              </a>
+            </div>
+          </article>
+
+          <article class="card">
+            <img
+              src="images/banos.jpg"
+              alt="Mueble de baño fabricado a medida"
+              loading="lazy">
+
+            <div class="card-body">
+              <h3>Muebles para baños</h3>
+              <p>
+                Muebles de almacenamiento y vanitorios
+                adaptados al diseño de tu baño.
+              </p>
+              <a class="text-link quote-link"
+                 data-service="muebles para baños"
+                 href="https://wa.me/573507760302">
+                Cotiza este servicio en la Linea 1 →
+              </a>
+            </div>
+          </article>
+
+          <article class="card">
+            <img
+              src="images/oficinas.jpg"
+              alt="Mobiliario personalizado para oficinas y negocios"
+              loading="lazy">
+
+            <div class="card-body">
+              <h3>Oficinas y negocios</h3>
+              <p>
+                Escritorios, estaciones de trabajo,
+                mostradores y muebles comerciales.
+              </p>
+              <a class="text-link quote-link"
+                 data-service="muebles para oficinas y negocios"
+                 href="https://wa.me/573507760302">
+                Cotiza este servicio en la Linea 1 →
+              </a>
+            </div>
+          </article>
+
+          <article class="card">
+            <img
+              src="images/personalizados.jpg"
+              alt="Proyecto de mobiliario personalizado"
+              loading="lazy">
+
+            <div class="card-body">
+              <h3>Proyectos personalizados</h3>
+              <p>
+                Diseñamos otras soluciones en MDF,
+                melamina y otros tableros para casas,
+                apartamentos y locales.
+              </p>
+              <a class="text-link quote-link"
+                 data-service="un proyecto personalizado"
+                 href="https://wa.me/573507760302">
+                Cotiza este servicio en la Linea 1 →
+              </a>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- NUEVA SECCIÓN: MATERIALES, ACABADOS Y HERRAJES -->
+
+    <section class="services" id="materiales">
+      <div class="container">
+
+        <div class="section-heading">
+          <p class="eyebrow">Detalles que marcan la diferencia</p>
+          <h2>Materiales, acabados y accesorios</h2>
+          <p>
+            Personalizamos cada proyecto con materiales, herrajes
+            y soluciones funcionales que se adaptan a tu espacio,
+            tus necesidades y tu estilo.
+          </p>
+        </div>
+
+        <div class="cards">
+
+          <article class="card">
+            <div class="card-body">
+              <h3>Materiales y acabados</h3>
+              <p>
+                <strong>MDF:</strong> ideal para proyectos que
+                requieren superficies uniformes y acabados cuidados.
+              </p>
+              <p>
+                <strong>Melamina:</strong> variedad de colores,
+                diseños y texturas según las referencias disponibles.
+              </p>
+              <p>
+                <strong>Aglomerado:</strong> una alternativa funcional
+                para distintos tipos de mobiliario. Podemos ofrecer
+                tableros con resistencia a la humedad cuando esa
+                característica corresponda a la referencia seleccionada.
+              </p>
+              <p>
+                La elección del tablero, el recubrimiento y la protección
+                de cantos y uniones se define según el uso y las
+                condiciones de cada proyecto.
+              </p>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="card-body">
+              <h3>Herrajes y accesorios especiales</h3>
+              <p>
+                Complementamos los muebles con soluciones que mejoran
+                el acceso, la organización y el aprovechamiento del espacio.
+              </p>
+              <p>
+                Bisagras de apertura de hasta 180°, canecas extraíbles,
+                condimenteros, especieros, esquineros, brazos DTC,
+                platilleros especiales y correderas ocultas para cajones.
+              </p>
+              <p>
+                También podemos incorporar puertas con frente de vidrio.
+                La disponibilidad y compatibilidad dependen del diseño
+                y de las características de cada herraje.
+              </p>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="card-body">
+              <h3>Iluminación integrada</h3>
+              <p>
+                Añade un toque moderno a cocinas, clósets, vitrinas
+                y muebles decorativos con opciones de iluminación
+                integrada, según el diseño del proyecto.
+              </p>
+              <p>
+                La iluminación es opcional y se define de acuerdo con
+                el tipo de mueble, la instalación y el resultado que
+                deseas conseguir.
+              </p>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <section id="nosotros">
+      <div class="container about-grid">
+
+        <!-- Esta es la imagen de "Tu espacio, tus ideas, tus muebles" -->
+        <img
+          class="about-photo"
+          src="images/espacio-ideas.jpg"
+          alt="Muebles personalizados para cada espacio"
+          loading="lazy">
+
+        <div class="about-copy">
+          <p class="eyebrow">Carpintería a la Medida</p>
+          <h2>Tu espacio, tus ideas, tus muebles.</h2>
+
+          <p>
+            Nos enfocamos en la fabricación de muebles
+            personalizados en MDF y melamina para diferentes
+            espacios del hogar y del sector comercial.
+          </p>
+
+          <p>
+            Cada proyecto comienza conociendo tus ideas,
+            las medidas del espacio y el estilo que buscas,
+            para ayudarte a encontrar una solución adecuada.
+          </p>
+
+          <ul class="features">
+            <li>Diseños adaptados a cada espacio.</li>
+            <li>Opciones de colores y acabados.</li>
+            <li>Soluciones para hogares y negocios.</li>
+            <li>Atención para proyectos en Bogotá.</li>
+          </ul>
+
+          <button class="btn btn-primary project-whatsapp-button" type="button" id="projectWhatsAppButton">
+            Háblanos de tu proyecto
+          </button>
+        </div>
+
+      </div>
+    </section>
+
+    <section class="process" id="proceso">
+      <div class="container">
+
+        <div class="section-heading">
+          <p class="eyebrow">Nuestro proceso</p>
+          <h2>De tu idea a un mueble a medida</h2>
+          <p>
+            Cuéntanos qué necesitas y conversemos
+            sobre las características de tu proyecto.
+          </p>
+        </div>
+
+        <div class="steps">
+
+          <div class="step">
+            <p class="step-number">PASO 01</p>
+            <h3>Cuéntanos tu idea</h3>
+            <p>
+              Comparte qué mueble necesitas, dónde irá
+              instalado y qué estilo te gusta.
+            </p>
+          </div>
+
+          <div class="step">
+            <p class="step-number">PASO 02</p>
+            <h3>Definimos los detalles</h3>
+            <p>
+              Revisamos medidas, materiales, distribución
+              y acabados para preparar una cotización.
+            </p>
+          </div>
+
+          <div class="step">
+            <p class="step-number">PASO 03</p>
+            <h3>Preparamos tu proyecto</h3>
+            <p>
+              Una vez acordadas las condiciones,
+              coordinamos los siguientes pasos del trabajo.
+            </p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <section class="contact" id="contacto">
+      <div class="container contact-inner">
+
+        <p class="eyebrow">Hablemos de tu proyecto</p>
+
+        <h2>¿Tienes un mueble en mente?</h2>
+
+        <p>
+          Escríbenos por WhatsApp y cuéntanos qué quieres
+          fabricar. Podemos conversar sobre las medidas,
+          el diseño y los materiales de tu proyecto.
+        </p>
+
+        <div class="actions">
+          <a class="btn btn-primary whatsapp-link"
+             href="https://wa.me/573507760302"
+             target="_blank"
+             rel="noopener noreferrer">
+            Solicitar cotización por WhatsApp
+          </a>
+
+          <a class="btn btn-outline"
+             href="#servicios">
+            Ver servicios
+          </a>
+        </div>
+
+        <p style="margin-top: 25px; font-size: 14px;">
+          Bogotá, Colombia
+        </p>
+
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="container">
+      <p><strong>Carpintería a la Medida</strong></p>
+      <p>Muebles personalizados en MDF, melamina y tableros seleccionados · Bogotá</p>
+      <p>© <span id="year"></span> Carpintería a la Medida.</p>
+    </div>
+  </footer>
+
+  <!-- Dos botones flotantes de WhatsApp -->
+  <a class="whatsapp-float"
+     href="https://wa.me/573507760302?text=Hola%2C%20quiero%20informaci%C3%B3n%20sobre%20sus%20muebles."
+     target="_blank"
+     rel="noopener noreferrer"
+     aria-label="Contactar por la primera línea de WhatsApp">
+    WhatsApp 1 ↗
+  </a>
+
+  <a class="whatsapp-float whatsapp-float-secondary"
+     href="https://wa.me/573219192084?text=Hola%2C%20quiero%20informaci%C3%B3n%20sobre%20sus%20muebles."
+     target="_blank"
+     rel="noopener noreferrer"
+     aria-label="Contactar por la segunda línea de WhatsApp">
+    WhatsApp 2 ↗
+  </a>
+
+
+
+  <div class="whatsapp-choice-overlay" id="whatsappChoiceOverlay" aria-hidden="true">
+    <div class="whatsapp-choice-modal" role="dialog" aria-modal="true" aria-labelledby="whatsappChoiceTitle">
+      <h3 id="whatsappChoiceTitle">Elige por dónde escribirnos</h3>
+      <p>Tenemos dos líneas de WhatsApp para atenderte.</p>
+      <div class="whatsapp-choice-options">
+        <a id="projectWhatsAppPrimary" href="https://wa.me/573507760302" target="_blank" rel="noopener noreferrer">WhatsApp 1 · 350 776 0302</a>
+        <a id="projectWhatsAppSecondary" href="https://wa.me/573219192084" target="_blank" rel="noopener noreferrer">WhatsApp 2 · 321 919 2084</a>
+      </div>
+      <button class="whatsapp-choice-close" type="button" id="closeWhatsAppChoice">Cancelar</button>
+    </div>
+  </div>
+
+  <script>
+    // Menú adaptable para celulares
+    const menuBtn = document.getElementById("menuBtn");
+    const menu = document.getElementById("menu");
+
+    menuBtn.addEventListener("click", () => {
+      const abierto = menu.classList.toggle("open");
+      menuBtn.setAttribute("aria-expanded", abierto);
+    });
+
+    // Cerrar el menú al elegir una sección
+    menu.querySelectorAll("a").forEach(enlace => {
+      enlace.addEventListener("click", () => {
+        menu.classList.remove("open");
+        menuBtn.setAttribute("aria-expanded", "false");
+      });
+    });
+
+    // Líneas de WhatsApp
+    const whatsappPrincipal = "573507760302";
+    const whatsappAlternativo = "573219192084";
+
+    function crearEnlaceWhatsApp(numero, mensaje) {
+      return "https://wa.me/" + numero +
+        "?text=" + encodeURIComponent(mensaje);
+    }
+
+    function agregarSegundaLinea(enlace, mensaje, esServicio = false) {
+      const segundo = enlace.cloneNode(true);
+
+      segundo.classList.remove("quote-link", "whatsapp-link");
+      segundo.classList.add("whatsapp-secondary-link");
+      segundo.href = crearEnlaceWhatsApp(whatsappAlternativo, mensaje);
+      segundo.target = "_blank";
+      segundo.rel = "noopener noreferrer";
+      segundo.textContent = esServicio
+        ? "Cotiza este servicio en la Linea 2 →"
+        : "WhatsApp 2 · 321 919 2084";
+
+      enlace.insertAdjacentElement("afterend", segundo);
+    }
+
+    // Mensajes personalizados para cada servicio y dos líneas de contacto
+    document.querySelectorAll(".quote-link").forEach(enlace => {
+      const servicio = enlace.dataset.service;
+      const mensaje =
+        "Hola, vi la página de Carpintería a la Medida y quiero cotizar " +
+        servicio + ". ¿Me pueden dar información?";
+
+      enlace.href = crearEnlaceWhatsApp(whatsappPrincipal, mensaje);
+      enlace.target = "_blank";
+      enlace.rel = "noopener noreferrer";
+
+      agregarSegundaLinea(enlace, mensaje, true);
+    });
+
+    // Todos los botones generales de cotización abren el mismo selector de líneas
+    const whatsappChoiceOverlay = document.getElementById("whatsappChoiceOverlay");
+    const closeWhatsAppChoice = document.getElementById("closeWhatsAppChoice");
+    const projectWhatsAppButton = document.getElementById("projectWhatsAppButton");
+    const projectMessage = "Hola, vi la página de Carpintería a la Medida y quiero información sobre un proyecto de muebles personalizados en MDF, melamina y aglomerado.";
+
+    document.getElementById("projectWhatsAppPrimary").href = crearEnlaceWhatsApp(whatsappPrincipal, projectMessage);
+    document.getElementById("projectWhatsAppSecondary").href = crearEnlaceWhatsApp(whatsappAlternativo, projectMessage);
+
+    function abrirSelectorWhatsApp(evento) {
+      if (evento) evento.preventDefault();
+      whatsappChoiceOverlay.classList.add("open");
+      whatsappChoiceOverlay.setAttribute("aria-hidden", "false");
+    }
+
+    // Portada y sección de contacto: un solo botón que muestra las dos líneas
+    document.querySelectorAll(".whatsapp-link").forEach(enlace => {
+      enlace.href = "#contacto";
+      enlace.removeAttribute("target");
+      enlace.addEventListener("click", abrirSelectorWhatsApp);
+    });
+
+    // También se mantiene el mismo comportamiento en “Háblanos de tu proyecto”
+    projectWhatsAppButton.addEventListener("click", abrirSelectorWhatsApp);
+
+    function cerrarSelectorWhatsApp() {
+      whatsappChoiceOverlay.classList.remove("open");
+      whatsappChoiceOverlay.setAttribute("aria-hidden", "true");
+    }
+
+    closeWhatsAppChoice.addEventListener("click", cerrarSelectorWhatsApp);
+    whatsappChoiceOverlay.addEventListener("click", (evento) => {
+      if (evento.target === whatsappChoiceOverlay) cerrarSelectorWhatsApp();
+    });
+    document.addEventListener("keydown", (evento) => {
+      if (evento.key === "Escape") cerrarSelectorWhatsApp();
+    });
+
+
+    // Año automático en el pie de página
+    document.getElementById("year").textContent =
+      new Date().getFullYear();
+  </script>
+
+</body>
+</html>
